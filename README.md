@@ -1,1 +1,1 @@
-Telegram-бот для подбрасывания монеты.
+Telegram-бот Telegram bot for coin tossing.
