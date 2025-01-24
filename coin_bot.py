@@ -1,6 +1,9 @@
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes, filters
 import random
+import os
+
+
 
 # Приветствие и кнопка
 async def welcome_with_buttons(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -24,7 +27,7 @@ async def flip_coin(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 # Основная функция для запуска бота
 def main():
     # Вставьте токен вашего бота
-    TOKEN = "7886903896:AAEUxOH_JfngaIvsZE8mvNjeWZ0SHCCxfhU"
+    TOKEN = os.getenv("TG_COIN_BOT_TOKEN")
 
     # Создаем объект Application
     application = Application.builder().token(TOKEN).build()
